@@ -1,0 +1,39 @@
+---
+import Card from "../Card.astro";
+import keychainImage from "./keychain.jpg";
+import maggiePosterImage from "./maggie_poster.jpg";
+import lauraPosterImage from "./laura_poster.jpg";
+import coverCellReportsImage from "./cover_cellreports.jpg";
+---
+
+<ul role="list" class="link-card-grid">
+    <Card
+        title="Merch"
+        body="Vi designer merch; for eksempel t-skjorter eller nøkkelringer."
+        img={keychainImage}
+    />
+    <Card
+        title="Prisbelønnet poster"
+        body="Få hjelp med din vitenskapelige poster."
+        img={maggiePosterImage}
+    />
+    <Card
+        title="Nyskapende design"
+        body="Utforsk mulighetene i din vitenskaplige formidling."
+        img={lauraPosterImage}
+    />
+    <Card
+        title="Vitenskapelig kommunikasjon"
+        body="Illustrasjon fra nevrovitenskaplig publikasjon."
+        img={coverCellReportsImage}
+    />
+</ul>
+
+<style>
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>

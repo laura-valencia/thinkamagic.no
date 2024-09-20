@@ -17,34 +17,63 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<nav>
+			<a href="/">Thinkamagic</a>
+			<a href="/#signup">Kontakt</a>
+		</nav>
+		<main>
+			<slot />
+		</main>
+		<footer>
+			<p>
+				<span>Laura Valencia Illustration</span>
+				<span>&ndash;</span>
+				<span>Biologist and Artist</span>
+				<span>&ndash;</span>
+				<span>Mexican located in Norway</span>
+			</p>
+		</footer>
 	</body>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
+		--accent: 125, 110, 201;
+		--accent-light: 248, 235, 255;
+		--accent-dark: 183, 165, 218;
 		--accent-gradient: linear-gradient(
 			45deg,
 			rgb(var(--accent)),
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
+		--contrast: 0, 201, 162
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	html, body {
+		margin: 0;
+		padding: 0;
+	}
+	nav {
+		display: flex;
+		flex-direction: row;
+		gap: 1.5rem;
+		padding: .5rem 1rem;
+
+		a {
+			color: black;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+	}
+	footer {
+		background: #e6e6e6;
+		padding: 3rem 1rem;
+
+		p {
+			margin: auto;
+			text-align: center;
+		}
 	}
 </style>
